@@ -1,0 +1,13 @@
+p {
+  background-color: antiquewhite;
+  height: 1%;
+  width: 23%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow-wrap: anywhere;
+  padding: 11px;
+  flex-wrap: wrap;
+  margin: 0px 38%;
+  border-radius: 12px;
+}
