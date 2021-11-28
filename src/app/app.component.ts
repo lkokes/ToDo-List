@@ -10,13 +10,14 @@ export class AppComponent {
   novaUloha: String = '';
   zoznamUloh: String[] = [];
 
-  pridajUlohu() {
+  pridajUlohu(): void {
 
     if(this.novaUloha !== ''){
       this.zoznamUloh.push(this.novaUloha)
       }
-    for (var i=0; i<this.zoznamUloh.length; i++){
-      console.log(this.zoznamUloh[i])
-    }
+  }
+
+  odstranUlohu(pridanaUloha: String): void {
+    this.zoznamUloh = this.zoznamUloh.filter(it => it !== pridanaUloha)
   }
 }

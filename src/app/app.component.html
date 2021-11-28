@@ -3,6 +3,6 @@
 <button (click)="pridajUlohu()">Pridať</button>
 <div>
   <p *ngFor="let uloha of zoznamUloh">
-    <app-uloha [uloha]="uloha"></app-uloha>
+    <app-uloha [uloha]="uloha" (mazanaUloha)="odstranUlohu($event)"></app-uloha>
   </p>
 </div>

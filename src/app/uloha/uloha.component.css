@@ -1,4 +1,4 @@
-p {
+div {
   background-color: antiquewhite;
   height: 1%;
   width: 23%;
@@ -10,4 +10,8 @@ p {
   flex-wrap: wrap;
   margin: 0px 38%;
   border-radius: 12px;
+}
+
+p {
+  display: flex;
 }
