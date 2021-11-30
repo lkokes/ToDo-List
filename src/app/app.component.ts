@@ -17,6 +17,12 @@ export class AppComponent {
       }
   }
 
+  handleKeyboardEvent(event: any) {
+    if (event.keyCode === 13) {
+      this.pridajUlohu()
+    }
+  }
+
   odstranUlohu(pridanaUloha: String): void {
     this.zoznamUloh = this.zoznamUloh.filter(it => it !== pridanaUloha)
   }

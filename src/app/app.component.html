@@ -1,5 +1,5 @@
 
-<input type="text" [(ngModel)]="novaUloha">
+<input type="text" [(ngModel)]="novaUloha" (keydown)="handleKeyboardEvent($event)">
 <button (click)="pridajUlohu()">Pridať</button>
 <div>
   <p *ngFor="let uloha of zoznamUloh">

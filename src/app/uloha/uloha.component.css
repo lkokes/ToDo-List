@@ -1,17 +1,35 @@
-div {
+div.task {
   background-color: antiquewhite;
-  height: 1%;
+  height: max-content;
   width: 23%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   overflow-wrap: anywhere;
-  padding: 11px;
+  padding: 4px 15px;
+  margin: 7px 38%;
+  border-radius: 20px;
   flex-wrap: wrap;
-  margin: 0px 38%;
-  border-radius: 12px;
+  float: left;
+  display: flex;
+  border: #a67509 2px solid;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-p {
-  display: flex;
+p.delete {
+  background-color: #4c00ff;
+  color: white;
+  height: 21px;
+  width: 23px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  right: -9px;
+  float: right;
+}
+
+span {
+  display: block;
+  width: 80%;
 }
