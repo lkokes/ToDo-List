@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Uloha } from './uloha';
+import { UlohaComponent } from './uloha/uloha.component';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +9,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  novaUloha: String = '';
-  zoznamUloh: String[] = [];
+  zoznamUloh: Uloha[] = [];
+
+  inputDescription: String = '';
 
   pridajUlohu(): void {
 
-    if(this.novaUloha !== ''){
-      this.zoznamUloh.push(this.novaUloha)
+    if(this.inputDescription !== ''){
+
+      if(this.zoznamUloh.length > 0){
+        var uloha: Uloha = {id: Number(this.zoznamUloh[this.zoznamUloh.length-1].id)+1, text: this.inputDescription};
+        this.zoznamUloh.push(uloha);
+      } 
+      else {
+        this.zoznamUloh.push( { id: 0, text: this.inputDescription}); 
       }
+
+      this.inputDescription = '';
+    }
   }
 
   handleKeyboardEvent(event: any) {
@@ -23,7 +35,7 @@ export class AppComponent {
     }
   }
 
-  odstranUlohu(pridanaUloha: String): void {
-    this.zoznamUloh = this.zoznamUloh.filter(it => it !== pridanaUloha)
+  odstranUlohu(pridanaUloha: Uloha): void {
+   this.zoznamUloh = this.zoznamUloh.filter(it => it !== pridanaUloha)
   }
 }

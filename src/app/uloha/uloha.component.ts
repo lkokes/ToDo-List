@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Uloha } from '../uloha'
 
 @Component({
   selector: 'app-uloha',
@@ -7,9 +8,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class UlohaComponent implements OnInit {
 
-  @Input() uloha?: String;
+  @Input() uloha: Uloha = {id: 0, text: ''};
 
-  @Output() mazanaUloha: EventEmitter<String> = new EventEmitter<String>()
+  @Output() mazanaUloha: EventEmitter<Uloha> = new EventEmitter<Uloha>()
 
   constructor() { }
 
@@ -17,6 +18,6 @@ export class UlohaComponent implements OnInit {
   }
 
   odstranUlohu():void{
-    this.mazanaUloha.emit(this.uloha)
+   this.mazanaUloha.emit(this.uloha)
   }
 }
