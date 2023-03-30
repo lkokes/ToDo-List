@@ -1,6 +1,5 @@
-To do list je jednoduchá webová aplikácia na ukladanie vašich úloh, aby vám nič neušlo.
-
--pridávanie nových úloh
--mazanie dokončených úloh
+To do list is a simple web application for saving your tasks so that you don't miss anything. 
+- adding new tasks 
+- deleting completed tasks
 
 This project was generated with Angular CLI version 13.0.4.
